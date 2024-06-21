@@ -59,7 +59,17 @@ app.get("/thoughts/:thoughtId/edit", async (req, res) => {
 
 // vv UPDATE vv //
 
+app.put("/thoughts/:thoughtId", async (req, res) => {
+    await Thought.findByIdAndUpdate(req.params.thoughtId, req.body);
+    res.redirect(`/thoughts/${req.params.thoughtId}`);
+});
+
 // vv DELETE vv //
+
+app.delete("/thoughts/:thoughtId", async (req, res) => {
+    await Thought.findByIdAndDelete(req.params.thoughtId);
+    res.redirect("/thoughts");
+});
 
 app.listen("3000", () => {
     console.log("Listening on port 3000")

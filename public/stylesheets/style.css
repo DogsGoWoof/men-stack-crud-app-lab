@@ -1,3 +1,12 @@
+@keyframes wiggle {
+    25% {
+        transform: rotate(5deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -28,4 +37,65 @@ a {
     color: gold;
     margin: 0 1dvw;
     text-decoration: none;
+}
+
+fieldset {
+    padding: 2dvh;
+    margin: 1dvh;
+    border-radius: 1dvw;
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    width: 50dvw;
+}
+
+form {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+textarea {
+    min-height: 80px;
+}
+
+button[type="submit"] {
+    font-size: 5dvh;
+}
+
+button[type="submit"]>div:hover {
+    animation: wiggle .5s 2;
+}
+
+img {
+    max-width: 30%;
+    margin: 1dvh;
+}
+
+#detail-div {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1dvh;
+}
+
+#thought-list {
+    display: flex;
+    list-style-type: none;
+    text-align: center;
+}
+
+.thought-data {
+    border: .1dvw dashed white;
+    margin: 1dvw;
+    padding: 1dvh 0 1dvh 0;
+}
+
+.thought-data:hover {
+    border: .1dvw solid white;
+}
+
+.object-name {
+    font-style: italic;
 }
