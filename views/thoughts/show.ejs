@@ -1,0 +1,10 @@
+<%- include("../partials/html-head") %>
+    <%- include("../partials/nav"); %>
+        <h1><%= thought.title %></h1>
+        <h2><%= thought.object %></h2>
+        <p><%= thought.description %></p>
+    </body>
+    <footer>
+        <a href="../thoughts/<%= thought._id %>/edit">Rethink thought</a>
+    </footer>
+</html>

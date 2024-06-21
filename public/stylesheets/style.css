@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background: radial-gradient(rgb(86, 86, 196), darkblue) no-repeat;
+    background-size: cover;
+    color: white;
+    height: 75dvh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: start;
+    align-items: center;
+    margin-top: 25dvh;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    position: fixed;
+    top: 1dvh;
+    left: 1dvw;
+}
+
+a {
+    color: gold;
+    margin: 0 1dvw;
+    text-decoration: none;
+}

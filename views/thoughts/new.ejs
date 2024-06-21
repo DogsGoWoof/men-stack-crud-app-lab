@@ -1,0 +1,23 @@
+<%- include("../partials/html-head") %>
+<%- include("../partials/nav"); %>
+    <h1>Empty Out Head</h1>
+    <form action="/thoughts" method="POST">
+        <fieldset>
+            <legend>Thought Name and Point of Focus</legend>
+            <label for="title">Title:</label>
+            <input type="text" name="title" id="title" />
+
+            <label>Object:</label>
+            <input type="text" name="object" id="object" />
+        </fieldset>
+        <label for="description">Description: </label>
+        <textarea name="description" id="description"></textarea>
+        
+        <label for="image">Image Link:</label>
+        <input type="text" name="image" id="image" />
+
+        <button type="submit">💡</button>
+    </form>
+</body>
+
+</html>

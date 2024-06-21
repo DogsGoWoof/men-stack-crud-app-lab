@@ -1,0 +1,10 @@
+<%- include("../partials/html-head") %>
+<%- include("../partials/nav"); %>
+    <h1>Thoughts</h1>
+    <ul>
+    <% thoughts.forEach(thought => { %>
+            <li><a href="/thoughts/<%= thought._id %>"><%= thought.title %></a></li>
+    <% }); %>
+    </ul>
+</body>
+</html>
