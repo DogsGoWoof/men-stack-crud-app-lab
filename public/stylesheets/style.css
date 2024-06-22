@@ -39,6 +39,10 @@ nav {
     position: fixed;
     top: 1dvh;
     left: 1dvw;
+    outline: .5dvh solid #ffffff55;
+    border-radius: 1dvw;
+    border-bottom-right-radius: 0;
+    padding: .5dvh;
 }
 
 a {
@@ -59,6 +63,7 @@ fieldset {
     justify-content: center;
     flex-flow: column wrap;
     width: 50dvw;
+    border-bottom-right-radius: 0;
 }
 
 form {
@@ -69,6 +74,8 @@ form {
 
 textarea {
     min-height: 80px;
+    border-radius: 1dvw;
+    border-bottom-right-radius: 0;
 }
 
 button[type="submit"] {
@@ -128,6 +135,7 @@ footer {
     width: 90%;
     outline: 1dvh groove #ffffff44;
     border-radius: 1dvh;
+    border-bottom-right-radius: 0;
     margin: 1dvh;
 }
 
@@ -135,6 +143,8 @@ footer {
     border: .1dvw dashed white;
     margin: 1dvw;
     padding: 1dvh 0 1dvh 0;
+    border-radius: 100dvw;
+    border-bottom-right-radius: 0;
 }
 
 .thought-data:hover {
@@ -192,7 +202,14 @@ footer {
     padding-left: 2dvh;
 }
 
-#thoughts-h1 {
+h1 {
     font-family: "Bebas Neue", sans-serif;
     font-size: 10dvw;
+    filter: drop-shadow(0 0 1dvw black);
+}
+
+input {
+    border-radius: 100dvw;
+    border-bottom-right-radius: 0;
+    padding-left: 1dvw;
 }

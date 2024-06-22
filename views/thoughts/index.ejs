@@ -1,10 +1,12 @@
 <%- include("../partials/html-head") %>
 <%- include("../partials/nav"); %>
     <h1 id="thoughts-h1">Thoughts</h1>
-    <ul id="thought-list">
-    <% thoughts.forEach(thought => { %>
-            <li class="thought-data"><a href="/thoughts/<%= thought._id %>"><%= thought.title %></a></li>
-    <% }); %>
-    </ul>
+    <% if (thoughts.length > 0) { %>
+        <ul id="thought-list">
+            <% thoughts.forEach(thought => { %>
+                    <li class="thought-data"><a href="/thoughts/<%= thought._id %>"><%= thought.title %></a></li>
+            <% }); %>
+        </ul>
+    <% } %>
 </body>
 </html>
