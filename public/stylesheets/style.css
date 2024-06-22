@@ -1,9 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 @keyframes wiggle {
     25% {
         transform: rotate(5deg);
     }
     75% {
         transform: rotate(-5deg);
+    }
+}
+
+@keyframes flip {
+    50% {
+        transform: rotate3d(0, 1, 0, 360deg);
     }
 }
 
@@ -39,6 +47,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: yellow;
+}
+
 fieldset {
     padding: 2dvh;
     margin: 1dvh;
@@ -60,16 +72,43 @@ textarea {
 }
 
 button[type="submit"] {
-    font-size: 5dvh;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2.5dvh;
+    background: #600ca9;
+    color: gold;
+    border-radius: 100dvw 100dvw 10dvw 10dvw;
+    padding-top: .5dvh;
+    width: 10dvw;
 }
 
-button[type="submit"]>div:hover {
+#recollect {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2.5dvh;
+    background: gold;
+    border-radius:  10dvw 10dvw 100dvw 100dvw;
+    padding-bottom: .5dvh;
+    width: 15dvw;
+}
+
+#recollect>a {
+    color: #600ca9;
+}
+
+.icon {
+    font-size: 3dvh;
+}
+
+#trashcan:hover {
     animation: wiggle .5s 2;
 }
 
 img {
     max-width: 30%;
     margin: 1dvh;
+}
+
+footer {
+    margin: 2dvh;
 }
 
 #detail-div {
@@ -82,8 +121,14 @@ img {
 
 #thought-list {
     display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
     list-style-type: none;
     text-align: center;
+    width: 90%;
+    outline: 1dvh groove #ffffff44;
+    border-radius: 1dvh;
+    margin: 1dvh;
 }
 
 .thought-data {
@@ -94,8 +139,60 @@ img {
 
 .thought-data:hover {
     border: .1dvw solid white;
+    background: #ffffff44;
 }
 
 .object-name {
     font-style: italic;
+    filter: drop-shadow(0 -1dvh .1dvh black);
+}
+
+#title-h1 {
+    filter: drop-shadow(0 -1dvh 1dvh black) blur(.1dvh);
+}
+
+#description-p {
+    margin: 3dvh;
+    filter: drop-shadow(0 0 1dvw black);
+}
+
+#welcome {
+    margin: 1dvh;
+    text-decoration: underline;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 10dvh;
+}
+
+#slogan {
+    background: conic-gradient(from .32turn at 15% 20%, gray 80%, red, orange, yellow 90%, green 96%, blue);
+    padding: 5dvw;
+    text-decoration: overline underline;
+    border-top: 5dvh solid white;
+    border-bottom: 5dvh solid white;
+    border-left: 5dvh solid rgb(177, 32, 32);
+    border-right: 5dvh solid rgb(32, 170, 32);
+    border-radius: 100dvw;
+    outline: 1dvw ridge gray;
+    margin: 1dvh;
+}
+
+#slogan-text {
+    filter: drop-shadow(0 0 1dvh black);
+}
+
+#tagline {
+    transform: rotate(-3deg) translateY(3dvh);
+}
+
+#look {
+    border: .1dvh solid gray;
+    border-radius: 100dvw;
+    background: #44444455;
+    padding: 1dvh;
+    padding-left: 2dvh;
+}
+
+#thoughts-h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 10dvw;
 }

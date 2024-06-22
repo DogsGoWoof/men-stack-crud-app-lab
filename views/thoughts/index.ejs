@@ -1,6 +1,6 @@
 <%- include("../partials/html-head") %>
 <%- include("../partials/nav"); %>
-    <h1>Thoughts</h1>
+    <h1 id="thoughts-h1">Thoughts</h1>
     <ul id="thought-list">
     <% thoughts.forEach(thought => { %>
             <li class="thought-data"><a href="/thoughts/<%= thought._id %>"><%= thought.title %></a></li>
